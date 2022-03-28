@@ -12,9 +12,12 @@
     */
 
     //Query bien hecha:
-    $consulta = $mysqli -> prepare("SELECT * FROM `preguntas` WHERE numero = ? ");
-    $consulta = $mysqli -> bind_param("s", $numeroPregunta);
-
+    $consulta = $mysqli -> prepare("SELECT correcta FROM `preguntas` WHERE numero = ? ");
+    $consulta -> bind_param("s", $numeroPregunta);
+    $consulta -> execute();
+    $consulta -> store_result();
+    $consulta -> bind_result($correcta);
+    $consulta -> fech();
 
     if($r['correcta'] == $respuesta){
         echo 'acertaste';
