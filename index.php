@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,7 +33,7 @@
 
                 for($i=0;$i<$num_filas;$i++){
                     $r = $consulta -> fetch_array();
-                    echo'<button onclick="cargaTema('.$r['tema'].')" type="button" class="btn btn-primary col-12">'.$r['tema'].'</button><br><br>';
+                    echo'<button onclick="cargaTema(\''.$r["tema"].'\')" type="button" class="btn btn-primary col-12">'.$r["tema"].'</button><br><br>';
                 }
                 ?>
             </div>
@@ -44,11 +43,11 @@
             </div>
         </div>
     </div>
-    <script>src="js/jquery.js"</script>
+    <script src="JS/jquery.js"></script>
 
     <script>
         function cargaTema(_tema){
-            $('#partida').load('partida.php', {tema: _tema});
+            $('#partida').load('partida.php', {tema: _tema})
         }
     </script>
 </body>
