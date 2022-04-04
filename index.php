@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,11 +43,11 @@
             </div>
         </div>
     </div>
-    <script>src="js/jquery.js"</script>
+    <script src="JS/jquery.js"></script>
 
     <script>
         function cargaTema(_tema){
-            $('#partida').load('partida.php', {tema: _tema});
+            $('#partida').load('partida.php', {tema: _tema})
         }
     </script>
 </body>
